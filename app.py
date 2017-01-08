@@ -8,12 +8,16 @@ from extracted_links import links
 articles = []
 csv_articles = []
 
+# Defile HTML escape options
 html_escape_table = {
    '"': "&quot;",
    "'": "&apos;"
    }
 
+# Open a JSON file
 output = open('exports/export.json', 'w')
+
+# Open a CSV file & create CSV writer
 outfile = open('exports/export.csv', 'w')
 writer = csv.writer(outfile, delimiter=',', quotechar='"')
 
@@ -38,6 +42,9 @@ for link in links:
     csv_articles.append(csvData)
 
 
+# Write to JSON file
 json.dump(articles, output)
+
+# Write to CSV file & close CSV file
 writer.writerows(csv_articles)
 outfile.close()
