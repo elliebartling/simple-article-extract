@@ -1,10 +1,10 @@
 module.exports = {
   // Where is a list of links you want to collect?
-  "link_base": "http://fee.org/people/daniel-bier/",
-  "host": "http://fee.org",
+  "link_base": "[url-to-paginated-author-archive]",
+  "host": "[base-url.org]",
 
   // Cheerio uses this selector to find the urls
-  "html_link_selector": ".member-post-box .article h2 a",
+  "html_link_selector": "jquery-style-html-selector",
 
   // In our case, the author page is paginated, so we want to
   // pass a parameter to the request that crawls each paginated page

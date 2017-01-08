@@ -1,4 +1,5 @@
-exports/*
+exports/export.csv
+exports/export.json
 logs
 .git
 .DS_Store
