@@ -2,22 +2,24 @@
 This weekend’s web challenge was to grab all 109 of my boyfriend’s op-eds from a particular website and export them into a Medium-friendly format so he can add them to his blog.
 
 Challenges:
-1. Medium will only let you import Wordpress-style XML.
-2. This particular website’s RSS feed for authors isn’t available.
-3. I’ve totally never written a web-crawler before.
+
+1.  Medium will only let you import Wordpress-style XML.
+2.  This particular website’s RSS feed for authors isn’t available.
+3.  I’ve totally never written a web-crawler before.
+
 
 But whatever! I might need to do this for a client at work soon anyway, so I figured it was worth figuring out.
 
 I started out with [this very neat Python library called Newspaper](https://github.com/codelucas/newspaper/). I’ve never written Python before, but it is just lovely compared to PHP, and this library does basically all of the heavy lifting in terms of article parsing.
 
 ```
-news = newspaper.build('http://fee.org')
+news = newspaper.build('http://[website-in-question.org]')
 print(news.size())
 ```
 
 The first few times I ran this first script, I ended up with this:
 
-`>>> Total Articles for Source: 37`
+`Total Articles for Source: 37`
 
 … which was obviously not true.
 
