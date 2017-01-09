@@ -9,4 +9,7 @@ module.exports = {
   // In our case, the author page is paginated, so we want to
   // pass a parameter to the request that crawls each paginated page
   "pages_to_crawl": 5,
+
+  "medium_user": "elliembartling"
+
 }

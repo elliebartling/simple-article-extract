@@ -8,3 +8,4 @@ recovered
 recovery
 .gitignore
 node_modules
+.env
